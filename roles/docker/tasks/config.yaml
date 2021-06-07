@@ -1,0 +1,12 @@
+---
+- name: "add user to docker group"
+  user:
+    name: "{{ docker_main_user }}"
+    groups: docker
+    append: yes
+
+- name: "chown docker group docker script"
+  file:
+    path: "/bin/docker"
+    mode: "0755"
+    group: "docker"

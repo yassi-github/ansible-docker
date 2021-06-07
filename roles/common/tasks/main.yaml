@@ -1,0 +1,4 @@
+---
+- name: package.yaml
+  include_tasks: package.yaml
+

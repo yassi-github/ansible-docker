@@ -1,0 +1,17 @@
+---
+docker:
+  repository_key_extention_type: "gpg"
+  repository_key_uri: "https://download.docker.com/linux/ubuntu/gpg"
+  key_name: "docker-archive-keyring"
+
+  repository_uri: "https://download.docker.com/linux/ubuntu"
+
+  packages:
+  - "docker-ce"
+  - "docker-ce-cli"
+  - "containerd.io"
+
+pin_priority: 100
+components: "stable"
+
+docker_main_user: "{{ ansible_user }}"

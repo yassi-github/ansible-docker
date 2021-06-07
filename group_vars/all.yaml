@@ -1,0 +1,9 @@
+---
+ansible_user: centos
+ansible_password: password
+ansible_become_pass: password
+
+repository_keys_path: "/usr/share/keyrings"
+repository_sources_path: "/etc/apt/sources.list.d"
+repository_preferences_path: "/etc/apt/preferences.d/"
+cpu_architecture: "amd64"

@@ -1,0 +1,10 @@
+---
+- name: "chmood"
+  file:
+    path: "{{ install_path }}"
+    mode: "0775"
+
+- name: "dl completion"
+  get_url:
+    url: "{{ completion_url }}"
+    dest: "{{ completion_dest }}"

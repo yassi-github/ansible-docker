@@ -1,0 +1,10 @@
+---
+- hosts: server
+  # connection: local
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - role: common
+    - role: docker
+    - role: docker-compose
+    - role: docker-machine

@@ -1,0 +1,6 @@
+---
+docker_compose_version_short: "1.29.2"
+source_url: " https://github.com/docker/compose/releases/download/{{ docker_compose_version_short }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
+install_path: "/usr/local/bin/docker-compose"
+completion_url: "https://raw.githubusercontent.com/docker/compose/{{ docker_compose_version_short }}/contrib/completion/bash/docker-compose"
+completion_dest: "/etc/bash_completion.d/docker-compose"

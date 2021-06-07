@@ -1,0 +1,21 @@
+---
+- name: "add docker repository key"
+  script: shellscript/apt-key-add.sh {{ docker.repository_key_uri }} {{ docker.key_name }}.gpg
+
+- name: "add repository source file"
+  template:
+    src: docker.sources.j2
+    dest: "{{ repository_sources_path }}/docker.sources"
+
+- name: "add repository preferences file"
+  template:
+    src: docker.pref.j2
+    dest: "{{ repository_preferences_path }}/docker.pref"
+
+- name: "update repository cache"
+  apt:
+    update_cache: yes
+
+- name: "install package"
+  apt:
+    name: "{{ docker.packages }}"

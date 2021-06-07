@@ -1,0 +1,6 @@
+Types: deb
+URIs:  {{ docker.repository_uri }}
+Suites: {{ ansible_facts.distribution_release }}
+Components: {{ components }}
+Signed-By: {{ repository_keys_path }}/{{ docker.key_name }}.gpg
+Architectures: {{ cpu_architecture }}

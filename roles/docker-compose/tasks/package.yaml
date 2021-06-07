@@ -1,0 +1,5 @@
+---
+- name: "dl"
+  get_url:
+    url: "{{ source_url }}"
+    dest: "{{ install_path }}"
