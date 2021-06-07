@@ -1,5 +1,5 @@
 ---
-ansible_user: centos
+ansible_user: ubuntu
 ansible_password: password
 ansible_become_pass: password
 
