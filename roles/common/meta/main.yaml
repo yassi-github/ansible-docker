@@ -1,9 +1,0 @@
-- name: "check distridution"
-  debug:
-    var: "ansible_distribution"
-  failed_when: ansible_distribution != 'Ubuntu'
-
-- name: "check architecture"
-  debug:
-    var: "ansible_architecture"
-  failed_when: ansible_architecture != 'X86_64'
