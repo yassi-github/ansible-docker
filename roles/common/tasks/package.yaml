@@ -1,4 +1,12 @@
 ---
+- name: "apt update"
+  apt:
+    update_cache: yes
+
+- name: "apt upgrade"
+  apt:
+    upgrade: "yes"
+
 - name: "install depends to add-3rd party repository"
   apt:
     name:
