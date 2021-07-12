@@ -15,3 +15,5 @@ pin_priority: 100
 components: "stable"
 
 docker_main_user: "{{ ansible_user }}"
+
+install_gvisor: yes

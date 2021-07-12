@@ -1,0 +1,7 @@
+---
+- name: "install gvisor"
+  script: shellscript/install_gvisor.sh
+
+- name: "install as Docker runtime"
+  shell: "/usr/local/bin/runsc install"
+  notify: "restart docker"
