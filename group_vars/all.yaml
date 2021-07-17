@@ -1,6 +1,6 @@
 ---
 ansible_user: ubuntu
-ansible_password: password
+ansible_become_password: password
 
 repository_keys_path: "/usr/share/keyrings"
 repository_sources_path: "/etc/apt/sources.list.d"
