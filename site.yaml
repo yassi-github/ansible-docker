@@ -17,4 +17,4 @@
     - role: git
     - role: docker
     - role: docker-compose
-    - role: docker-machine
+    # - role: docker-machine

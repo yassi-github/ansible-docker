@@ -16,4 +16,5 @@ components: "stable"
 
 docker_main_user: "{{ ansible_user }}"
 
+install_compose_cli: yes
 install_gvisor: yes

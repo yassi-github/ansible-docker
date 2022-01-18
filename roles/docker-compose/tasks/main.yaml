@@ -5,6 +5,3 @@
 - name: config.yaml
   include_tasks: config.yaml
 
-- name: service.yaml
-  include_tasks: service.yaml
-

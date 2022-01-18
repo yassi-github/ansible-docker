@@ -3,8 +3,31 @@
   file:
     path: "{{ install_path }}"
     mode: "0775"
+  when: install_docker_compose_v2 == False
 
 - name: "dl completion"
   get_url:
     url: "{{ completion_url }}"
     dest: "{{ completion_dest }}"
+  when: install_docker_compose_v2 == False
+
+- name: "chmood"
+  file:
+    path: "{{ docker_compose_v2.install_dir }}/docker-compose"
+    mode: "0775"
+
+- name: "add alias for compatibility"
+  blockinfile:
+    path: .bashrc
+    # should be top of bashrc
+    insertbefore: BOF
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      alias docker-compose='docker compose'
+
+# no completion for v2.
+# Heard that v1 completion still in work. (https://github.com/docker/compose/issues/8550#issuecomment-993259602)
+# - name: "dl completion"
+#   get_url:
+#     url: "{{ docker_compose_v2.completion_url }}"
+#     dest: "{{ docker_compose_v2.completion_dest }}"

@@ -8,6 +8,10 @@
 - name: service.yaml
   include_tasks: service.yaml
 
+- name: compose-cli.yaml
+  include_tasks: compose-cli.yaml
+  when: install_compose_cli == True
+
 - name: gvisor.yaml
   include_tasks: gvisor.yaml
   when: install_gvisor == True

@@ -1,6 +1,15 @@
 ---
+# 1.29.2 is the latest version of V1.
+# V2 is differ to install method.
+# https://github.com/docker/compose/releases
 docker_compose_version_short: "1.29.2"
 source_url: " https://github.com/docker/compose/releases/download/{{ docker_compose_version_short }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
 install_path: "/usr/local/bin/docker-compose"
 completion_url: "https://raw.githubusercontent.com/docker/compose/{{ docker_compose_version_short }}/contrib/completion/bash/docker-compose"
 completion_dest: "/etc/bash_completion.d/docker-compose"
+
+install_docker_compose_v2: yes
+docker_compose_v2_version: "2.2.2"
+docker_compose_v2:
+  source_url: "https://github.com/docker/compose/releases/download/v{{ docker_compose_v2_version }}/docker-compose-linux-x86_64"
+  install_dir: /usr/local/lib/docker/cli-plugins
